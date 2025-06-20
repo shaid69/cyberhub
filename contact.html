@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth" >
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cyber Hub - Contact Us</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Animate.css CDN -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="bg-gray-900 text-gray-200 font-sans transition-colors duration-500">
+
+  <!-- Header -->
+  <header
+    class="bg-gradient-to-r from-cyan-600 to-violet-700 sticky top-0 z-50 shadow-lg flex justify-between items-center px-6 py-4"
+  >
+    <a href="index.html" aria-label="Cyber Hub" class="flex items-center space-x-3">
+      <img src="assets/images/cyberhub-logo.png" alt="Cyber Hub Logo" class="h-10 w-10 object-contain" />
+      <h1
+        class="text-white font-mono text-3xl font-bold tracking-widest glitch select-none"
+      >
+        CYBER HUB
+      </h1>
+    </a>
+
+    <nav
+      id="nav-menu"
+      class="hidden md:flex space-x-8 text-white font-semibold text-lg"
+    >
+      <a href="index.html" class="hover:text-cyan-300">Home</a>
+      <a href="blog.html" class="hover:text-cyan-300">Blog</a>
+      <a href="course.html" class="hover:text-cyan-300">Courses</a>
+      <a href="enroll.html" class="bg-cyan-400 hover:bg-violet-400 px-4 py-2 rounded font-semibold text-gray-900 transition-shadow shadow-md">
+        Enroll
+      </a>
+      <a href="faq.html" class="hover:text-cyan-300">FAQ</a>
+      <a href="contact.html" class="hover:text-cyan-300" aria-current="page">Contact Us</a>
+    </nav>
+
+    <button
+      id="nav-toggle"
+      aria-label="Toggle navigation menu"
+      class="md:hidden text-white focus:outline-none"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-8 w-8"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16" />
+      </svg>
+    </button>
+
+    <button
+      id="mode-toggle"
+      aria-label="Toggle Dark Mode"
+      class="ml-4 text-white focus:outline-none"
+      title="Toggle Light/Dark Mode"
+    >
+      🌙
+    </button>
+  </header>
+
+  <!-- Mobile Menu -->
+  <nav
+    id="mobile-menu"
+    class="fixed inset-0 bg-gray-900 bg-opacity-95 flex flex-col items-center justify-center space-y-8 text-3xl font-bold text-cyan-400 hidden z-50"
+  >
+    <a href="index.html" class="hover:text-cyan-300">Home</a>
+    <a href="blog.html" class="hover:text-cyan-300">Blog</a>
+    <a href="course.html" class="hover:text-cyan-300">Courses</a>
+    <a href="enroll.html" class="hover:text-cyan-300">Enroll</a>
+    <a href="faq.html" class="hover:text-cyan-300">FAQ</a>
+    <a href="contact.html" class="hover:text-cyan-300" aria-current="page">Contact Us</a>
+    <button id="mobile-menu-close" aria-label="Close menu" class="text-6xl text-gray-500 hover:text-cyan-300">×</button>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="max-w-4xl mx-auto px-6 py-16">
+    <h2 class="text-4xl font-extrabold text-cyan-400 mb-12 text-center drop-shadow-lg">
+      Contact Us
+    </h2>
+
+    <form 
+  action="https://your-backend-endpoint.com/contact-handler" 
+  method="POST" 
+  class="bg-gray-800 rounded-xl p-8 shadow-lg max-w-xl mx-auto" 
+  novalidate
+>
+
+      <div class="mb-6">
+        <label for="name" class="block mb-2 font-semibold text-cyan-400">Full Name</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Your full name"
+          required
+          class="w-full p-3 rounded bg-gray-900 border border-cyan-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 text-gray-200"
+        />
+        <p class="mt-1 text-xs text-red-500 hidden" id="name-error">Please enter your name.</p>
+      </div>
+
+      <div class="mb-6">
+        <label for="email" class="block mb-2 font-semibold text-cyan-400">Email Address</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="you@example.com"
+          required
+          class="w-full p-3 rounded bg-gray-900 border border-cyan-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 text-gray-200"
+        />
+        <p class="mt-1 text-xs text-red-500 hidden" id="email-error">Please enter a valid email address.</p>
+      </div>
+
+      <div class="mb-6">
+        <label for="message" class="block mb-2 font-semibold text-cyan-400">Message</label>
+        <textarea
+          id="message"
+          name="message"
+          rows="5"
+          placeholder="Write your message here..."
+          required
+          class="w-full p-3 rounded bg-gray-900 border border-cyan-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 text-gray-200 resize-none"
+        ></textarea>
+        <p class="mt-1 text-xs text-red-500 hidden" id="message-error">Please enter a message.</p>
+      </div>
+
+      <button
+        type="submit"
+        class="bg-cyan-400 hover:bg-violet-400 text-gray-900 font-bold py-3 px-8 rounded-lg shadow-lg transition"
+      >
+        Send Message
+      </button>
+    </form>
+  </main>
+
+  <!-- Footer -->
+  <footer
+    class="text-center py-6 bg-gray-800 text-gray-500 text-sm select-none"
+  >
+    &copy; 2025 Cyber Hub | Built by Shaid Mahamud | <a href="mailto:cyberhub@protonmail.com" class="text-cyan-400 hover:underline">Contact Us</a>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Simple client-side validation
+    const form = document.getElementById('contact-form');
+    form.addEventListener('submit', (e) => {
+      let valid = true;
+
+      const name = form.name;
+      const email = form.email;
+      const message = form.message;
+
+      const nameError = document.getElementById('name-error');
+      const emailError = document.getElementById('email-error');
+      const messageError = document.getElementById('message-error');
+
+      // Name validation
+      if (name.value.trim() === '') {
+        nameError.classList.remove('hidden');
+        valid = false;
+      } else {
+        nameError.classList.add('hidden');
+      }
+
+      // Email validation (basic regex)
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email.value.trim())) {
+        emailError.classList.remove('hidden');
+        valid = false;
+      } else {
+        emailError.classList.add('hidden');
+      }
+
+      // Message validation
+      if (message.value.trim() === '') {
+        messageError.classList.remove('hidden');
+        valid = false;
+      } else {
+        messageError.classList.add('hidden');
+      }
+
+      if (!valid) {
+        e.preventDefault();
+      }
+    });
+
+    // Mobile menu toggle
+    const navToggle = document.getElementById('nav-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileMenuClose = document.getElementById('mobile-menu-close');
+
+    navToggle.addEventListener('click', () => {
+      mobileMenu.classList.remove('hidden');
+    });
+
+    mobileMenuClose.addEventListener('click', () => {
+      mobileMenu.classList.add('hidden');
+    });
+
+    // Dark mode toggle
+    const modeToggle = document.getElementById('mode-toggle');
+    modeToggle.addEventListener('click', () => {
+      document.body.classList.toggle('bg-gray-900');
+      document.body.classList.toggle('bg-white');
+      document.body.classList.toggle('text-gray-200');
+      document.body.classList.toggle('text-gray-900');
+    });
+  </script>
+</body>
+</html>

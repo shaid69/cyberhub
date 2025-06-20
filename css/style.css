@@ -1,0 +1,54 @@
+/* Custom glitch effect for logo */
+.glitch {
+  position: relative;
+  color: white;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  user-select: none;
+  filter: drop-shadow(0 0 5px #0ff);
+}
+
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  right: 0;
+  opacity: 0.7;
+  clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
+  animation: glitch 2s infinite;
+}
+
+.glitch::after {
+  clip-path: polygon(0 55%, 100% 55%, 100% 100%, 0 100%);
+  animation-delay: 1s;
+  color: #a78bfa;
+}
+
+@keyframes glitch {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-2px, -2px);
+  }
+  40% {
+    transform: translate(2px, 2px);
+  }
+  60% {
+    transform: translate(-2px, 2px);
+  }
+  80% {
+    transform: translate(2px, -2px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+/* Dark mode background for tailwind */
+.dark body {
+  background-color: #121212;
+  color: #d1d5db;
+}

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cyber Hub - Enrollment</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.14/lottie.min.js"></script>
+</head>
+<body class="bg-gray-900 text-gray-200 font-sans transition-colors duration-500">
+
+  <div id="lottie-bg" class="fixed inset-0 -z-10 opacity-20"></div>
+
+  <header class="bg-gradient-to-r from-cyan-600 to-violet-700 sticky top-0 z-50 shadow-lg flex justify-between items-center px-6 py-4">
+    <a href="index.html" aria-label="Cyber Hub" class="flex items-center space-x-3">
+      <img src="assets/images/cyberhub-logo.png" alt="Cyber Hub Logo" class="h-10 w-10 object-contain" />
+      <h1 class="text-white font-mono text-3xl font-bold tracking-widest glitch select-none">CYBER HUB</h1>
+    </a>
+    <nav class="hidden md:flex space-x-8 text-white font-semibold text-lg">
+      <a href="index.html" class="hover:text-cyan-300">Home</a>
+      <a href="blog.html" class="hover:text-cyan-300">Blog</a>
+      <a href="course.html" class="hover:text-cyan-300">Courses</a>
+      <a href="enroll.html" class="bg-cyan-400 hover:bg-violet-400 px-4 py-2 rounded font-semibold text-gray-900 transition-shadow shadow-md" aria-current="page">Enroll</a>
+      <a href="faq.html" class="hover:text-cyan-300">FAQ</a>
+    </nav>
+    <button id="nav-toggle" aria-label="Toggle navigation menu" class="md:hidden text-white focus:outline-none">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16" />
+      </svg>
+    </button>
+    <button id="mode-toggle" aria-label="Toggle Dark Mode" class="ml-4 text-white focus:outline-none" title="Toggle Light/Dark Mode">🌙</button>
+  </header>
+
+  <nav id="mobile-menu" class="fixed inset-0 bg-gray-900 bg-opacity-95 flex flex-col items-center justify-center space-y-8 text-3xl font-bold text-cyan-400 hidden z-50">
+    <a href="index.html" class="hover:text-cyan-300">Home</a>
+    <a href="blog.html" class="hover:text-cyan-300">Blog</a>
+    <a href="course.html" class="hover:text-cyan-300">Courses</a>
+    <a href="enroll.html" class="hover:text-cyan-300" aria-current="page">Enroll</a>
+    <a href="faq.html" class="hover:text-cyan-300">FAQ</a>
+    <button id="mobile-menu-close" aria-label="Close menu" class="text-6xl text-gray-500 hover:text-cyan-300">×</button>
+  </nav>
+
+  <main class="max-w-3xl mx-auto px-6 py-16">
+    <h1 class="text-4xl font-extrabold text-cyan-400 mb-12 text-center">Enroll in Cybersecurity Course</h1>
+
+    <form id="enroll-form" class="bg-gray-800 rounded-xl p-8 shadow-md space-y-6" action="payment/sandbox-form.html" method="POST" novalidate>
+      
+      <div>
+        <label for="fullname" class="block text-gray-300 font-semibold mb-2">Full Name</label>
+        <input
+          type="text"
+          id="fullname"
+          name="fullname"
+          required
+          placeholder="Your full name"
+          class="w-full rounded-md px-4 py-3 bg-gray-900 border border-gray-700 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400 outline-none transition"
+        />
+      </div>
+
+      <div>
+        <label for="email" class="block text-gray-300 font-semibold mb-2">Email Address</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          required
+          placeholder="your.email@example.com"
+          class="w-full rounded-md px-4 py-3 bg-gray-900 border border-gray-700 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400 outline-none transition"
+        />
+      </div>
+
+      <div>
+        <label for="phone" class="block text-gray-300 font-semibold mb-2">Phone Number (for payment & communication)</label>
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          required
+          placeholder="+8801XXXXXXXXX"
+          pattern="^\+?8801[0-9]{9}$"
+          title="Please enter Bangladeshi phone number starting with +8801"
+          class="w-full rounded-md px-4 py-3 bg-gray-900 border border-gray-700 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400 outline-none transition"
+        />
+      </div>
+
+      <div>
+        <label for="course" class="block text-gray-300 font-semibold mb-2">Select Course</label>
+        <select
+          id="course"
+          name="course"
+          required
+          class="w-full rounded-md px-4 py-3 bg-gray-900 border border-gray-700 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400 outline-none transition"
+        >
+          <option value="" disabled selected>Select a course</option>
+          <option value="advanced-cybersecurity">Advanced Cybersecurity Course - BDT 5,000</option>
+          <option value="ethical-hacking">Ethical Hacking Bootcamp - BDT 4,000</option>
+          <option value="osint-masterclass">OSINT Masterclass - BDT 3,000</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="payment-method" class="block text-gray-300 font-semibold mb-2">Preferred Payment Method</label>
+        <select
+          id="payment-method"
+          name="payment_method"
+          required
+          class="w-full rounded-md px-4 py-3 bg-gray-900 border border-gray-700 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400 outline-none transition"
+        >
+          <option value="" disabled selected>Select payment method</option>
+          <option value="bkash">bKash</option>
+          <option value="nagad">Nagad</option>
+          <option value="rocket">Rocket</option>
+          <option value="card">Card (SSLCommerz)</option>
+        </select>
+      </div>
+
+      <button
+        type="submit"
+        class="w-full bg-cyan-400 hover:bg-violet-400 text-gray-900 font-bold py-4 rounded-lg shadow-lg transition"
+      >
+        Proceed to Payment
+      </button>
+    </form>
+  </main>
+
+  <footer class="text-center py-6 bg-gray-800 text-gray-500 text-sm select-none">
+    &copy; 2025 Cyber Hub | Built by Shaid Mahamud
+  </footer>
+
+  <script src="js/main.js"></script>
+
+  <script>
+    // Basic form validation before submission
+    const form = document.getElementById('enroll-form');
+    form.addEventListener('submit', (e) => {
+      if(!form.checkValidity()) {
+        e.preventDefault();
+        alert('Please fill in all required fields with valid information.');
+      }
+    });
+  </script>
+
+</body>
+</html>

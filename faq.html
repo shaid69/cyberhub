@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth" >
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cyber Hub - FAQ</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Animate.css CDN -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="bg-gray-900 text-gray-200 font-sans transition-colors duration-500">
+
+  <!-- Header -->
+  <header
+    class="bg-gradient-to-r from-cyan-600 to-violet-700 sticky top-0 z-50 shadow-lg flex justify-between items-center px-6 py-4"
+  >
+    <a href="index.html" aria-label="Cyber Hub" class="flex items-center space-x-3">
+      <img src="assets/images/cyberhub-logo.png" alt="Cyber Hub Logo" class="h-10 w-10 object-contain" />
+      <h1
+        class="text-white font-mono text-3xl font-bold tracking-widest glitch select-none"
+      >
+        CYBER HUB
+      </h1>
+    </a>
+
+    <nav
+      id="nav-menu"
+      class="hidden md:flex space-x-8 text-white font-semibold text-lg"
+    >
+      <a href="index.html" class="hover:text-cyan-300">Home</a>
+      <a href="blog.html" class="hover:text-cyan-300">Blog</a>
+      <a href="course.html" class="hover:text-cyan-300">Courses</a>
+      <a href="enroll.html" class="bg-cyan-400 hover:bg-violet-400 px-4 py-2 rounded font-semibold text-gray-900 transition-shadow shadow-md">
+        Enroll
+      </a>
+      <a href="faq.html" class="hover:text-cyan-300" aria-current="page">FAQ</a>
+    </nav>
+
+    <button
+      id="nav-toggle"
+      aria-label="Toggle navigation menu"
+      class="md:hidden text-white focus:outline-none"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-8 w-8"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16" />
+      </svg>
+    </button>
+
+    <button
+      id="mode-toggle"
+      aria-label="Toggle Dark Mode"
+      class="ml-4 text-white focus:outline-none"
+      title="Toggle Light/Dark Mode"
+    >
+      🌙
+    </button>
+  </header>
+
+  <!-- Mobile Menu -->
+  <nav
+    id="mobile-menu"
+    class="fixed inset-0 bg-gray-900 bg-opacity-95 flex flex-col items-center justify-center space-y-8 text-3xl font-bold text-cyan-400 hidden z-50"
+  >
+    <a href="index.html" class="hover:text-cyan-300">Home</a>
+    <a href="blog.html" class="hover:text-cyan-300">Blog</a>
+    <a href="course.html" class="hover:text-cyan-300">Courses</a>
+    <a href="enroll.html" class="hover:text-cyan-300">Enroll</a>
+    <a href="faq.html" class="hover:text-cyan-300" aria-current="page">FAQ</a>
+    <button id="mobile-menu-close" aria-label="Close menu" class="text-6xl text-gray-500 hover:text-cyan-300">×</button>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="max-w-5xl mx-auto px-6 py-16">
+    <h2 class="text-4xl font-extrabold text-cyan-400 mb-12 text-center drop-shadow-lg">
+      Frequently Asked Questions (FAQ)
+    </h2>
+
+    <section class="space-y-6">
+      <!-- FAQ Item -->
+      <div class="bg-gray-800 rounded-lg shadow-md p-6 cursor-pointer faq-item">
+        <h3 class="text-xl font-semibold text-cyan-400 flex justify-between items-center">
+          What courses does Cyber Hub offer?
+          <svg class="w-6 h-6 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" >
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </h3>
+        <p class="mt-3 text-gray-300 hidden">
+          Cyber Hub offers courses in cybersecurity fundamentals, ethical hacking, penetration testing, OSINT, malware analysis, and more.
+        </p>
+      </div>
+
+      <div class="bg-gray-800 rounded-lg shadow-md p-6 cursor-pointer faq-item">
+        <h3 class="text-xl font-semibold text-cyan-400 flex justify-between items-center">
+          How do I enroll in a course?
+          <svg class="w-6 h-6 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" >
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </h3>
+        <p class="mt-3 text-gray-300 hidden">
+          Simply click on the "Enroll" button in the navigation bar or visit the enrollment page to fill out the form and complete your payment.
+        </p>
+      </div>
+
+      <div class="bg-gray-800 rounded-lg shadow-md p-6 cursor-pointer faq-item">
+        <h3 class="text-xl font-semibold text-cyan-400 flex justify-between items-center">
+          Are the courses self-paced or instructor-led?
+          <svg class="w-6 h-6 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" >
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </h3>
+        <p class="mt-3 text-gray-300 hidden">
+          Our courses offer a mix of both self-paced learning and live instructor-led sessions to accommodate different learning preferences.
+        </p>
+      </div>
+
+      <div class="bg-gray-800 rounded-lg shadow-md p-6 cursor-pointer faq-item">
+        <h3 class="text-xl font-semibold text-cyan-400 flex justify-between items-center">
+          What payment methods are accepted?
+          <svg class="w-6 h-6 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" >
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </h3>
+        <p class="mt-3 text-gray-300 hidden">
+          We accept local payments popular in Bangladesh such as bKash, Nagad, Rocket, and card payments through SSLCommerz.
+        </p>
+      </div>
+
+      <div class="bg-gray-800 rounded-lg shadow-md p-6 cursor-pointer faq-item">
+        <h3 class="text-xl font-semibold text-cyan-400 flex justify-between items-center">
+          Will I receive a certificate upon course completion?
+          <svg class="w-6 h-6 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" >
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </h3>
+        <p class="mt-3 text-gray-300 hidden">
+          Yes, all students who successfully complete a course will receive an official Cyber Hub certificate.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer
+    class="text-center py-6 bg-gray-800 text-gray-500 text-sm select-none"
+  >
+    &copy; 2025 Cyber Hub | Built by Shaid Mahamud | <a href="mailto:cyberhub@protonmail.com" class="text-cyan-400 hover:underline">Contact Us</a>
+  </footer>
+
+  <!-- FAQ Toggle Script -->
+  <script>
+    document.querySelectorAll('.faq-item').forEach((item) => {
+      item.addEventListener('click', () => {
+        const answer = item.querySelector('p');
+        const icon = item.querySelector('svg');
+
+        if (answer.classList.contains('hidden')) {
+          answer.classList.remove('hidden');
+          icon.classList.add('rotate-180');
+        } else {
+          answer.classList.add('hidden');
+          icon.classList.remove('rotate-180');
+        }
+      });
+    });
+
+    // Mobile menu toggle (optional)
+    const navToggle = document.getElementById('nav-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileMenuClose = document.getElementById('mobile-menu-close');
+
+    navToggle.addEventListener('click', () => {
+      mobileMenu.classList.remove('hidden');
+    });
+
+    mobileMenuClose.addEventListener('click', () => {
+      mobileMenu.classList.add('hidden');
+    });
+
+    // Dark mode toggle (optional)
+    const modeToggle = document.getElementById('mode-toggle');
+    modeToggle.addEventListener('click', () => {
+      document.body.classList.toggle('bg-gray-900');
+      document.body.classList.toggle('bg-white');
+      document.body.classList.toggle('text-gray-200');
+      document.body.classList.toggle('text-gray-900');
+    });
+  </script>
+</body>
+</html>
